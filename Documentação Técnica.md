@@ -2,29 +2,37 @@
 
 Este programa em Python utiliza o poder do Google Generative AI para analisar e melhorar cenários de teste escritos no formato BDD (Behavior Driven Development). O programa pode processar dados de um Google Sheet ou de texto colado diretamente pelo usuário.
 
+---
 ## Fluxo do Programa
 
-1. **Instalação de Dependências:** O programa começa instalando as bibliotecas necessárias, incluindo `google-generativeai`, `gspread` e `oauth2client`.
-2. **Autenticação:** O usuário precisa fornecer sua chave de API do Google para usar o serviço Generative AI.
+1. **Instalação de Dependências:** O programa começa instalando as bibliotecas necessárias, incluindo `google-generativeai`, `gspread`, `oauth2client`, `requests`, `json`, `pandas`, `io`, `google.colab`, `textwrap` e `IPython.display`.
+
+2. **Autenticação:** O usuário precisa fornecer sua chave de API do Google para usar o serviço Generative AI. 
+
 3. **Processamento de Entrada:** O programa solicita ao usuário a URL de um Google Sheet ou o texto do BDD. 
     - Se for fornecida uma URL, o programa usa a biblioteca `gspread` para acessar e ler os dados da planilha.
     - Se for fornecido texto, o programa o processa diretamente.
+
 4. **Análise do BDD:** O conteúdo processado é então passado para a função `analisar_conteudo`. Esta função formata o conteúdo em uma tabela Markdown e envia um prompt para o modelo de linguagem `gemini-1.5-pro-latest`. O prompt instrui o modelo a analisar o BDD e fornecer:
     - **Pontos Positivos:** Aspectos que contribuem para testes eficazes.
     - **Pontos Negativos:** Falhas que podem prejudicar os testes.
     - **Sugestões de Melhoria:** Recomendações para aprimorar o BDD.
-5. **Correção do BDD (Opcional):** O usuário pode optar por corrigir o BDD com base nas sugestões do modelo. Se o usuário escolher corrigir, o programa envia outro prompt para o modelo, solicitando que ele reescreva o BDD com base nas sugestões.
-6. **Correção do Português (Opcional):** O usuário pode optar por corrigir a ortografia e gramática do BDD corrigido. Se o usuário escolher corrigir, o programa envia o BDD corrigido para o modelo, solicitando que ele corrija os erros de português.
-7. **Exibição dos Resultados:** A análise do BDD, o BDD corrigido (se solicitado) e o BDD corrigido com o português revisado (se solicitado) são exibidos para o usuário em formato Markdown.
 
+5. **Correção do BDD (Opcional):** O usuário pode optar por corrigir o BDD com base nas sugestões do modelo. Se o usuário escolher corrigir, o programa envia outro prompt para o modelo, solicitando que ele reescreva o BDD com base nas sugestões.
+
+6. **Correção do Português (Opcional):** O usuário pode optar por corrigir a ortografia e gramática do BDD corrigido. Se o usuário escolher corrigir, o programa envia o BDD corrigido para o modelo, solicitando que ele corrija os erros de português.
+
+7. **Exibição dos Resultados:** A análise do BDD, o BDD corrigido (se solicitado) e o BDD corrigido com o português revisado (se solicitado) são exibidos para o usuário em formato Markdown.
+---
 ## Funções Principais
 
 - **`processar_arquivo(url_ou_bdd)`:** Processa a entrada do usuário, seja uma URL do Google Sheet ou texto.
 - **`analisar_conteudo(conteudo_processado)`:** Analisa o BDD usando o Google Generative AI.
-- **`corrigir_bdd(conteudo_processado)`:** Reescreve o BDD com base nas sugestões do modelo.
+- **`corrigir_bdd(conteudo_processado, analise)`:** Reescreve o BDD com base nas sugestões do modelo.
 - **`corrigir_portugues(conteudo_processado)`:** Corrige a ortografia e gramática do conteúdo.
 - **`exibir_resultado(texto, titulo)`:** Exibe o texto formatado em Markdown.
-
+- **`main()`:** Função principal que controla o fluxo do programa.
+---
 ## Bibliotecas Utilizadas
 
 - **`google-generativeai`:** Para acessar o Google Generative AI.
@@ -32,19 +40,19 @@ Este programa em Python utiliza o poder do Google Generative AI para analisar e 
 - **`oauth2client`:** Para autenticação com o Google APIs.
 - **`requests`:** Para fazer solicitações HTTP.
 - **`json`:** Para lidar com dados JSON.
-- **`pandas`:** Para manipulação de dados (não utilizado neste código, mas incluído nas dependências).
+- **`pandas`:** Para manipulação de dados.
 - **`io`:** Para lidar com fluxos de entrada e saída.
 - **`google.colab`:** Para acessar dados do Google Colab (específico para o ambiente Colab).
 - **`textwrap`:** Para formatação de texto.
 - **`IPython.display`:** Para exibir Markdown no notebook.
-
+---
 ## Observações
 
 - O programa requer uma chave de API válida do Google Cloud para acessar o serviço Generative AI.
 - O modelo de linguagem usado é o `gemini-1.5-pro-latest`, mas pode ser alterado para outros modelos compatíveis.
 - O programa assume que o BDD está no formato CTFL.
 - As configurações de segurança do modelo podem ser ajustadas na variável `safety_settings`.
-
+---
 ## Guia API's
 
 Este guia detalhado explica como configurar o acesso ao Google Sheets e ao Gemini através do Google Cloud Platform.
@@ -122,7 +130,7 @@ Este guia detalhado explica como configurar o acesso ao Google Sheets e ao Gemin
 
      # Agora você pode usar a biblioteca genai para interagir com o Gemini
      ```
-
+---
 ### Considerações de Segurança:
 
 - **Nunca compartilhe suas chaves de API publicamente.**
@@ -131,6 +139,6 @@ Este guia detalhado explica como configurar o acesso ao Google Sheets e ao Gemin
 
 Seguindo estes passos, você poderá usar o Google Cloud Platform para ler dados do Google Sheets e interagir com o Google Generative AI (Gemini) em seus projetos.
 
-### Conclusão
+### Conclusão:
 
 Este programa fornece uma maneira eficiente de analisar e melhorar cenários de teste BDD usando inteligência artificial. Ele automatiza o processo de revisão de código e ajuda a garantir que os testes sejam abrangentes e eficazes. 
