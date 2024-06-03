@@ -51,6 +51,6 @@ De uma olhada na [**Documentação de Uso**](https://github.com/Phablo-Lima/Desa
 
 Visite a [**Documentação Técnica Completa**](https://github.com/Phablo-Lima/Desafio_Gemini_Alura/blob/main/Documenta%C3%A7%C3%A3o%20T%C3%A9cnica.md) para informações detalhadas do programa.
 
-**⟶** [**Acesse o Código do Programa BDD Automator AQUI**](https://github.com/Phablo-Lima/Desafio_Gemini_Alura/blob/main/BDD_IA.ipynb) **⟵**
+**⟶** [**Acesse o Código do Programa BDD Automator AQUI**](https://github.com/Phablo-Lima/Desafio_Gemini_Alura/blob/main/BDD_Automator.ipynb) **⟵**
 
 ---
