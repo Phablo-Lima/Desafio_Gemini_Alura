@@ -1,73 +1,47 @@
 ![BDD Automator](https://github.com/Phablo-Lima/Desafio_Gemini_Alura/blob/main/imagens/BDD%20Automator.png)
 
-## Descubra o Que o BDD Automator Pode Fazer por Você:
+Diga olá ao futuro da qualidade de software com o **BDD Automator**, a ferramenta que **analisa e aprimora seus BDDs automaticamente** usando o poder do **Google Generative AI (Gemini)**! 
 
-* **Análise Automatizada de BDDs:** Diga adeus à fadiga da revisão manual! O BDD Automator analisa seus BDDs automaticamente, identificando potenciais falhas e gargalos.
-* **Detecção de Falhas Ocultas:** Nosso algoritmo de IA, impulsionado pelo Google Gemini, identifica problemas que você pode ter perdido, garantindo uma cobertura de testes completa e eficaz.
-* **Sugestões Inteligentes de Melhoria:** O BDD Automator vai além de apenas apontar as falhas. Ele oferece sugestões personalizadas para aprimorar seus BDDs, tornando-os mais robustos e eficientes.
-* **Geração Automática de BDDs Otimizados:** Com um clique, o BDD Automator reescreve seus BDDs com base nas sugestões da IA, criando testes mais eficazes e menos propensos a erros.
-* **Correção Ortográfica e Gramatical:** Garanta que seus BDDs estejam impecáveis! O BDD Automator corrige erros de português, assegurando clareza e profissionalismo.
+## ✨ Simplifique e otimize seus testes com a inteligência artificial!
 
-## Simples, Poderoso e Personalizado:
+Pare de perder tempo com análises manuais e deixe o BDD Automator fazer o trabalho pesado por você! Com ele, você:
 
-* **Fácil de Usar:** Basta fornecer o texto do BDD ou a URL do Google Sheet e o BDD Automator cuida do resto!
-* **Tecnologia de Ponta:** A IA do Google Gemini garante uma análise precisa, eficaz e sugestões inteligentes.
-* **Adaptável às suas Necessidades:** Receba sugestões personalizadas que se adequam ao seu contexto e estilo de desenvolvimento.
+* **Economiza tempo e esforço:** Automatize a revisão de BDDs e concentre-se em tarefas mais estratégicas.
+* **Eleva a qualidade dos seus testes:**  Garanta testes mais eficazes e confiáveis com a análise inteligente do Gemini.
+* **Melhora a cobertura dos seus testes:**  Identifique e corrija falhas ocultas para uma cobertura de testes impecável.
+* **Escreve BDDs mais claros e concisos:**  Otimize seus BDDs com sugestões de escrita e correção gramatical.
 
-## BDD Automator: A Evolução dos Testes com BDD Começa Aqui!
+##  ➡️ Veja como o BDD Automator funciona:
 
-Experimente agora o BDD Automator e descubra como a inteligência artificial pode transformar seus testes de software, tornando-os mais rápidos, eficientes e confiáveis.
+1. **Entrada:** Cole o texto do seu BDD ou forneça a URL do seu Google Sheet.
+2. **Análise:** O BDD Automator, usando o poder do Google Gemini, analisa seu BDD e identifica áreas de aprimoramento.
+3. **Sugestões:** Receba sugestões inteligentes para melhorar a clareza, completude e eficácia do seu BDD.
+4. **Correção:** Aceite as sugestões e deixe o BDD Automator reescrever o seu BDD automaticamente.
+5. **Pronto!** Tenha em mãos um BDD otimizado e pronto para garantir a qualidade do seu software!
 
----
+## 🚀 Recursos Poderosos:
 
-## Documentação Simplificada:
+* **Análise Completa:** O Google Gemini analisa seus BDDs em profundidade, identificando pontos fortes, fracos e oportunidades de melhoria.
+* **Sugestões Inteligentes:**  Receba sugestões claras e acionáveis para otimizar seus cenários de teste.
+* **Correção Automatizada:**  Corrija seus BDDs com um clique, aceitando as sugestões inteligentes do Gemini.
+* **Correção Gramatical:** Garanta BDDs impecáveis com a correção ortográfica e gramatical integrada.
+* **Flexibilidade:** Analise BDDs diretamente do texto ou importe de um Google Sheet.
 
-### Descrição:
+## 🧰  Construído com Tecnologia de Ponta:
 
-O BDD Automator é um programa Python que utiliza a inteligência artificial do Google Gemini para analisar e aprimorar BDDs. Ele automatiza o processo de revisão, identificando falhas e sugerindo melhorias para aumentar a cobertura dos testes.
+O BDD Automator é desenvolvido em Python e utiliza bibliotecas poderosas como:
 
-### Funcionamento:
+* **`google-generativeai`:** Para o poder da inteligência artificial do Google Gemini.
+* **`gspread`:** Para integração perfeita com o Google Sheets.
+* **`oauth2client`:** Para autenticação segura com as APIs do Google.
+* **E muito mais!**
 
-O programa é dividido em módulos principais:
+##  Comece a Automatizar suas Revisões de BDDs Hoje Mesmo!
 
-1. **Processamento de Dados:**
-   - `processar_arquivo(url_ou_bdd)`: Recebe a URL de um Google Sheet ou o texto do BDD.
-   - Utiliza a biblioteca `gspread` para extrair dados do Google Sheet (se aplicável).
+O BDD Automator é a ferramenta essencial para QA's que buscam **eficiência, precisão e qualidade** em seus testes de software.
 
-2. **Análise com IA:**
-   - `analisar_conteudo(conteudo_processado)`: Formata os dados do BDD e envia um prompt para o modelo `gemini-1.5-pro-latest` do Google Gemini.
-   - O modelo analisa o BDD como um especialista em QA, buscando pontos positivos, negativos e sugestões de melhoria.
+**Experimente agora e descubra o futuro do BDD!** 
 
-3. **Correção do BDD:**
-   - `corrigir_bdd(conteudo_processado)`: Reescreve o BDD com base nas sugestões de melhoria da IA.
-
-4. **Revisão de Português:**
-   - `corrigir_portugues(conteudo_processado)`: Corrige erros de português no BDD.
-
-5. **Interface do Usuário:**
-   - `exibir_resultado(texto, titulo)`: Formata a saída do modelo em Markdown e exibe para o usuário.
-   - `main()`: Gerencia o fluxo do programa.
-
-### Bibliotecas Utilizadas:
-
-* `google-generativeai`
-* `gspread`
-* `oauth2client`
-* `requests`
-* `pandas`
-* `textwrap`
-* `IPython.display`
-
-### Fluxo do Programa:
-
-1. O usuário fornece a URL do Google Sheet ou o texto do BDD.
-2. O programa processa os dados.
-3. O BDD formatado é enviado para o Google Gemini para análise.
-4. O modelo retorna a análise com sugestões de melhoria.
-5. O usuário decide se quer corrigir o BDD.
-6. Se sim, o BDD original e as sugestões são enviados ao Google Gemini para correção.
-7. O usuário pode optar por revisar o português do BDD corrigido.
-8. O programa exibe a análise e o BDD corrigido (se solicitado). 
 
 ---
 
